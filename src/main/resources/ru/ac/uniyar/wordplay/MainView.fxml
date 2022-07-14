@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ru.ac.uniyar.wordplay.MainController"
+            prefHeight="150.0" prefWidth="250.0">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Файл">
+                    <items>
+                        <Menu text="Новая игра">
+                            <items>
+                                <MenuItem text="Города" onAction="#urbanTheme"/>
+                                <MenuItem text="Животные" onAction="#animalsTheme"/>
+                                <MenuItem text="Растения"  onAction="#plantsTheme"/>
+                                <MenuItem text="Еда" onAction="#foodTheme"/>
+                                <MenuItem text="Химические элементы" onAction="#chemistryTheme"/>
+                            </items>
+                        </Menu>
+                        <MenuItem text="Выйти" onAction="#exitAction"/>
+                    </items>
+                </Menu>
+                <Menu text="Информация">
+                    <MenuItem text="О программе" onAction="#aboutAction"/>
+                </Menu>
+
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <GridPane alignment="TOP_CENTER" vgap="5" hgap="10">
+            <padding>
+                <Insets bottom="25" left="25" right="25" top="25"/>
+            </padding>
+            <Label text="Игра в слова" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Button text="Начать новую игру" GridPane.columnIndex="0" GridPane.rowIndex="1" onAction="#themeChoice"/>
+        </GridPane>
+    </center>
+
+</BorderPane>

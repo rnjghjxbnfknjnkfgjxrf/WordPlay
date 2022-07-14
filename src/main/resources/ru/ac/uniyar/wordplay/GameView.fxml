@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<SplitPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ru.ac.uniyar.wordplay.GameController"
+            prefHeight="300.0" prefWidth="500.0"  fx:id="gameWindow">
+
+    <GridPane alignment="CENTER"  minWidth="300">
+        <Label text="Текущее слово:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Text fx:id="currentWord" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Ваше слово:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="usersWordField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Тема:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Text fx:id="theme" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Button text="Тыц" onAction="#getUsersWord" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.columnSpan="2"/>
+    </GridPane>
+    <VBox>
+        <Label text="Использованные слова:" />
+        <ListView fx:id="listView"/>
+    </VBox>
+
+</SplitPane>
